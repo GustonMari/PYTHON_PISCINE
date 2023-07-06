@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 def load(path: str) -> pd.DataFrame:
-
+    """Loads a csv file into a pandas DataFrame"""
     assert os.path.exists(path), "File does not exist"
     if not path.endswith(".csv"):
         raise TypeError("Only .csv files are supported")

@@ -4,6 +4,7 @@ import os
 
 
 def printplot():
+    """Prints a plot of the life expectancy in France"""
     path: str = "life_expectancy_years.csv"
     data = load(path)
     data = data[data["country"] == "France"]
@@ -21,4 +22,5 @@ def printplot():
 
 
 if __name__ == "__main__":
+    """main function"""
     printplot()
