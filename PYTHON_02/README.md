@@ -1,0 +1,1 @@
+i dont know how to make an adaptatf x axis on the plot ex03

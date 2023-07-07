@@ -1,7 +1,6 @@
-import sys
 import pandas as pd
-import numpy as np
 import os
+
 
 def load(path: str) -> pd.DataFrame:
     """Loads a csv file into a pandas DataFrame"""
@@ -10,7 +9,7 @@ def load(path: str) -> pd.DataFrame:
         raise TypeError("Only .csv files are supported")
     try:
         data = pd.read_csv(path)
-        print("Loading dataset of dimensions" ,data.shape)
+        print("Loading dataset of dimensions", data.shape)
         # modif = data.iloc[:, 1:]
         # print("modified data:\n", modif)
         # print("================")
@@ -24,7 +23,4 @@ def load(path: str) -> pd.DataFrame:
         return None
     except AssertionError as error:
         print(error)
-        return None
-    except:
-        print("Something went wrong")
         return None
