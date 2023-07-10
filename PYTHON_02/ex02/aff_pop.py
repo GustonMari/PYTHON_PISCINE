@@ -24,7 +24,6 @@ def aff_pop():
     """Compare two different country with a plot"""
     path: str = "population_total.csv"
     data = load(path)
-    #TODO: attention il faut que les annees soient jusqu'a 2050
     data_fr = data[data['country'] == 'France']
     data_be = data[data['country'] == 'Belgium']
     x = data.columns[1:data.columns.get_loc("2050")+1]
