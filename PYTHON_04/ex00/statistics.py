@@ -29,21 +29,26 @@ def ft_quartile(*args: any):
     res.append(float(q3))
     print("quartile: ", res)
 
-# ! https://www.scribbr.com/statistics/standard-deviation/
-def ft_std(*args: any):
+def ft_var(*args: any) -> float:
     mean = ft_mean(*args)
     tmp_list = args
     tmp_list = [x - mean for x in tmp_list]
     tmp_list = [x ** 2 for x in tmp_list]
-    res =  sum([x for x in tmp_list]) / (len(tmp_list) - 1)
-    res = res ** 0.5
+    res = sum([x for x in tmp_list]) 
+    # ? for this exercise we work on a population so just N
+    res = res / (len(tmp_list))
+    return res
+
+# ! https://www.scribbr.com/statistics/standard-deviation/
+def ft_std(*args: any):
+    res = ft_var(*args) ** 0.5
     print("std: ", res)
 
-def ft_var(*args: any):
-    pass
 
 def ft_statistics(*args: any, **kwargs: any) -> None:
     """function statistics"""
+    if len(args) == 0:
+        return None
     for x in kwargs.values():
         match x:
             case "mean":
@@ -55,6 +60,7 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
             case "std":
                 ft_std(*args)
             case "var":
-                ft_var(*args)
+                print("var: ", ft_var(*args))
             case default:
+                # print("error")
                 return None
