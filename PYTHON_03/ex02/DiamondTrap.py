@@ -1,6 +1,7 @@
 from S1E7 import Baratheon, Lannister
 
-# ! this is the better way to do the exercise the second technique is not a good practice
+# ! this is the better way to do the exercise
+# ! the second technique is not a good practice
 # ! https://cutt.ly/cwiZ4krG
 # class King(Baratheon, Lannister):
 #     """King class"""
@@ -27,7 +28,6 @@ from S1E7 import Baratheon, Lannister
 #     def hairs(self, hairs):
 #         """set_hairs method"""
 #         self._hairs = hairs
-
 
 
 # !this way is the way with property() function technique
