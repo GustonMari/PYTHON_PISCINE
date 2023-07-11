@@ -10,6 +10,7 @@ class Character(ABC):
 
     @abstractmethod
     def die(self):
+        """die method"""
         self.is_alive = False
 
 

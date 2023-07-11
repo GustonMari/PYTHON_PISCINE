@@ -37,6 +37,7 @@ class King(Baratheon, Lannister):
     """King class"""
 
     def ____init__(self, first_name, is_alive=True):
+        """init method"""
         super().__init__(first_name, is_alive)
 
     def set_eyes(self, eyes):

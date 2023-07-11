@@ -25,15 +25,18 @@ class Lannister(Character):
     """Lannister class"""
 
     def __init__(self, first_name, is_alive=True):
+        """init method"""
         super().__init__(first_name, is_alive)
         self.family_name = "Lannister"
         self.eyes = "blue"
         self.hairs = "light"
 
     def __str__(self):
+        """overide str method"""
         return f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})"
 
     def __repr__(self):
+        """overide repr method"""
         return f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})"
 
     def die(self):
